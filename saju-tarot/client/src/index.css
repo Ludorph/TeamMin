@@ -1,0 +1,25 @@
+:root {
+  --bg: #0f1226;
+  --card: #1a1f3d;
+  --card-2: #232950;
+  --line: #313869;
+  --text: #eceefb;
+  --muted: #a3a9d1;
+  --gold: #e0b85c;
+  --gold-ink: #2b2200;
+  --danger: #ff8a80;
+  --el-wood: #4caf7a;
+  --el-fire: #ef5350;
+  --el-earth: #d4a24c;
+  --el-metal: #cfd8dc;
+  --el-water: #4aa3df;
+  font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); min-height: 100vh; }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
