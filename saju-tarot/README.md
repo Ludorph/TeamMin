@@ -36,7 +36,8 @@ cd ../server && npm install && npm start    # 시드 후 서버 실행 (PORT 환
 저장소 루트의 `render.yaml`(Blueprint)을 사용합니다.
 1. Render 대시보드 → New → Blueprint → 이 GitHub 저장소 선택
 2. `saju-fortune` 웹 서비스가 만들어지고 빌드·시작 명령은 `render.yaml`에 이미 들어 있습니다.
-3. 배포가 끝나면 Render가 알려 주는 주소로 접속합니다. 무료 플랜은 한동안 접속이 없으면 잠들어 첫 접속이 느릴 수 있습니다.
+3. 이후 `main` 브랜치에 푸시하면 `saju-tarot/` 안의 파일이 바뀐 경우 자동으로 다시 배포됩니다(Render 자동 배포).
+4. 배포가 끝나면 Render가 알려 주는 주소로 접속합니다. 무료 플랜은 한동안 접속이 없으면 잠들어 첫 접속이 느릴 수 있습니다.
 
 ## 폴더
 - `client/` React 화면, `server/` Express API·SQLite·계산 로직, `docs/` 구조도·플로우차트·유스케이스 다이어그램
