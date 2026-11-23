@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node db/seed.js && node index.js",
     "dev": "node --watch index.js",
     "seed": "node db/seed.js"
   },
@@ -17,5 +17,8 @@
     "cors": "^2.8.6",
     "express": "^5.3.0",
     "manseryeok": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

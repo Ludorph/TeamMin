@@ -1,0 +1,14 @@
+# Render 배포 설정(Blueprint). 저장소 루트에 두고, Render에서 "New > Blueprint"로 이 저장소를 연결한다.
+# React 화면을 빌드한 뒤 Express 서버 하나가 화면과 API를 함께 제공한다.
+services:
+  - type: web
+    name: saju-fortune
+    runtime: node
+    plan: free
+    rootDir: saju-tarot
+    buildCommand: npm --prefix client ci && npm --prefix client run build && npm --prefix server ci
+    startCommand: npm --prefix server start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.12.0

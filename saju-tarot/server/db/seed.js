@@ -9,6 +9,8 @@ const sajuTexts = [
   ...require("../data/topic_texts.json"),
   ...require("../data/period_texts.json"),
   ...require("../data/topic_element_texts.json"), // 분야별 상세(강한 오행에 따른 풀이)
+  ...require("../data/today_texts.json"), // 오늘의 운세
+  ...require("../data/match_texts.json"), // 궁합
 ];
 const insertSaju = db.prepare("INSERT OR REPLACE INTO saju_texts (category, key, text) VALUES (@category, @key, @text)");
 db.transaction(() => {

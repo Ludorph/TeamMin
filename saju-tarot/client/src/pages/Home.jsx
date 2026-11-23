@@ -7,7 +7,12 @@ function FortuneCard({ item, onPick }) {
     <li>
       <button
         type="button"
-        className={`fcard hue-${item.hue}${item.disabled ? " disabled" : ""}`}
+        className={`fcard hue-${item.hue}${item.disabled ? " disabled" : ""}${item.image ? " has-image" : ""}${item.imageFit === "top" ? " art-top" : ""}`}
+        style={
+          item.image
+            ? { backgroundImage: `url(${item.image})`, ...(item.imagePos ? { backgroundPositionX: item.imagePos } : {}) }
+            : undefined
+        }
         onClick={() => onPick(item)}
         disabled={item.disabled}
         aria-label={item.disabled ? `${item.title} (준비 중)` : `${item.title} 보기`}

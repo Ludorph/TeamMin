@@ -5,9 +5,14 @@ async function request(path, options) {
   return data;
 }
 
-export const getSaju = (body) =>
-  request("/saju", {
+const post = (path, body) =>
+  request(path, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
   });
+
+export const getSaju = (body) => post("/saju", body);
+
+// 궁합: 나와 상대의 입력을 함께 보낸다.
+export const getMatch = (me, partner) => post("/match", { me, partner });

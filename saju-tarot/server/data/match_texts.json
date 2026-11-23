@@ -1,0 +1,34 @@
+[
+  { "category": "match_ilgan", "key": "same", "text": "같은 오행의 일간이라 성향이 닮아 서로를 잘 이해합니다. 다만 닮은 만큼 부딪힐 때는 양보가 필요해요." },
+  { "category": "match_ilgan", "key": "a_gen_b", "text": "내가 상대를 북돋아 주는 관계입니다. 챙겨 주는 마음이 크니 서로 지치지 않게 주고받는 균형을 맞춰 보세요." },
+  { "category": "match_ilgan", "key": "b_gen_a", "text": "상대가 나를 북돋아 주는 관계입니다. 든든하게 기댈 수 있으니 고마움을 자주 표현하면 좋아요." },
+  { "category": "match_ilgan", "key": "a_ctl_b", "text": "내가 관계를 이끌고 주도하는 편입니다. 상대가 눌린다고 느끼지 않도록 의견을 자주 물어봐 주세요." },
+  { "category": "match_ilgan", "key": "b_ctl_a", "text": "상대가 관계를 이끌고 나는 맞춰 가기 쉬운 편입니다. 내 마음도 솔직히 말해야 균형이 잡혀요." },
+  { "category": "match_ilgan", "key": "hap", "text": "일간이 서로 끌어당기는 '합'의 관계입니다. 자연스럽게 마음이 가는 인연이지만 익숙함에 소홀해지지 않도록 하세요." },
+
+  { "category": "match_ilji", "key": "yukhap", "text": "일지가 서로 짝이 되는 '육합'입니다. 가까운 곳에서 편안하고 잘 맞는다고 느끼기 쉬워요." },
+  { "category": "match_ilji", "key": "samhap", "text": "일지가 같은 기운으로 모이는 '삼합'의 일부입니다. 목표를 함께 잡으면 힘이 커지는 관계예요." },
+  { "category": "match_ilji", "key": "chung", "text": "일지가 부딪히는 '충'의 관계입니다. 생활 방식이나 속도 차이로 자극을 받기 쉬우니 서로 다름을 인정하는 연습이 필요해요." },
+  { "category": "match_ilji", "key": "same", "text": "일지가 같아 생활 감각과 속마음이 비슷합니다. 편하지만 같은 약점도 닮을 수 있어요." },
+  { "category": "match_ilji", "key": "none", "text": "일지 사이에 특별한 합이나 충이 없는 무난한 관계입니다. 서로 알아 갈수록 깊어지는 사이예요." },
+
+  { "category": "match_balance", "key": "high", "text": "서로가 부족한 오행을 채워 주는 보완이 큰 관계입니다. 함께 있으면 균형이 잡히는 느낌을 받기 쉬워요." },
+  { "category": "match_balance", "key": "mid", "text": "일부 오행에서 서로를 보완해 줍니다. 부족한 부분은 대화로 채워 가면 좋아요." },
+  { "category": "match_balance", "key": "low", "text": "오행의 보완은 크지 않습니다. 비슷한 기운이거나 채워 줄 부분이 적어, 노력해서 맞춰 가는 관계예요." },
+
+  { "category": "match_tengod", "key": "비견", "text": "이 사람을 친구나 동료처럼 편하고 대등하게 느끼는 편입니다." },
+  { "category": "match_tengod", "key": "겁재", "text": "이 사람과 은근히 경쟁하거나 비교하게 되는 편입니다." },
+  { "category": "match_tengod", "key": "식신", "text": "이 사람 곁에서 여유롭고 즐거워지는 편입니다." },
+  { "category": "match_tengod", "key": "상관", "text": "이 사람 앞에서 솔직하게 표현하고 자극을 주고받는 편입니다." },
+  { "category": "match_tengod", "key": "편재", "text": "이 사람이 활동적이고 새로운 자극을 주는 존재로 느껴집니다." },
+  { "category": "match_tengod", "key": "정재", "text": "이 사람을 믿음직하고 안정감을 주는 존재로 느낍니다." },
+  { "category": "match_tengod", "key": "편관", "text": "이 사람에게 긴장과 책임감, 때로 압박을 느끼는 편입니다." },
+  { "category": "match_tengod", "key": "정관", "text": "이 사람을 존중하고 믿고 따르고 싶은 존재로 느낍니다." },
+  { "category": "match_tengod", "key": "편인", "text": "이 사람이 독특한 매력과 생각을 가진 존재로 느껴집니다." },
+  { "category": "match_tengod", "key": "정인", "text": "이 사람에게 돌봄과 배움을 받는 듯한 편안함을 느낍니다." },
+
+  { "category": "match_total", "key": "high", "text": "서로 잘 맞는 부분이 많은 궁합입니다. 강점은 살리고 익숙함에 소홀해지지 않도록 표현을 이어 가세요." },
+  { "category": "match_total", "key": "good", "text": "전반적으로 무난하고 좋은 궁합입니다. 다른 점은 대화로 맞추면 더 편안해져요." },
+  { "category": "match_total", "key": "mid", "text": "맞는 부분과 다른 부분이 함께 있는 궁합입니다. 서로의 방식을 이해하려는 노력이 관계를 키워요." },
+  { "category": "match_total", "key": "low", "text": "달라서 부딪히기 쉬운 궁합입니다. 대신 서로에게 배울 점이 많으니 속도를 맞춰 천천히 알아 가 보세요." }
+]

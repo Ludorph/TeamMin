@@ -3,6 +3,7 @@ const db = require("../db");
 const { calculateSaju } = require("../services/sajuCalc");
 const { monthlyFortune } = require("../services/monthly");
 const { yearlyFortune } = require("../services/periods");
+const { todayFortune } = require("../services/today");
 const router = express.Router();
 
 const getText = db.prepare("SELECT text FROM saju_texts WHERE category = ? AND key = ?");
@@ -72,9 +73,23 @@ router.post("/", (req, res) => {
     };
     const yearly = yearlyFortune(result.dayMaster, now).map((y) => ({ ...y, desc: textOf("yearly", y.stemTenGod) }));
 
+    // 오늘의 운세: 오늘 일진과 내 일간의 관계(십신)로 총평과 분야별 한 줄을 고른다.
+    const td = todayFortune(result.dayMaster, now);
+    const today = {
+      ...td,
+      summary: textOf("today", td.tenGod),
+      items: [
+        { key: "love", label: "애정", text: textOf("today_love", td.tenGod) },
+        { key: "money", label: "재물", text: textOf("today_money", td.tenGod) },
+        { key: "work", label: "업무", text: textOf("today_work", td.tenGod) },
+        { key: "health", label: "건강", text: textOf("today_health", td.tenGod) },
+      ],
+    };
+
     const { tenGods, voidBranches, birth, process: steps, ...rest } = result;
     res.json({
       ...rest,
+      today,
       elements: counts,
       dominant,
       lacking,

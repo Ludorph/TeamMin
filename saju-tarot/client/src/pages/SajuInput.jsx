@@ -23,7 +23,14 @@ function validate(form) {
   return errors;
 }
 
-function SajuInput({ form, onChange, onSubmit, loading, serverError, targetTitle }) {
+// heading·notice·nameLabel·submitLabel을 바꿔 "내 정보"와 "궁합 상대 정보" 입력에 같이 쓴다.
+function SajuInput({
+  form, onChange, onSubmit, loading, serverError, targetTitle,
+  heading = "사주 정보를 입력하세요",
+  notice,
+  nameLabel = "이름 또는 닉네임 (선택)",
+  submitLabel = "풀이 보기",
+}) {
   const [errors, setErrors] = useState({});
   const nameRef = useRef(null);
 
@@ -52,11 +59,12 @@ function SajuInput({ form, onChange, onSubmit, loading, serverError, targetTitle
 
   return (
     <section>
-      <h1 className="page-title">사주 정보를 입력하세요</h1>
-      {targetTitle && <p className="greeting">선택한 운세: <b>{targetTitle}</b> · 입력하면 바로 보여 드려요.</p>}
+      <h1 className="page-title">{heading}</h1>
+      {notice && <p className="greeting">{notice}</p>}
+      {!notice && targetTitle && <p className="greeting">선택한 운세: <b>{targetTitle}</b> · 입력하면 바로 보여 드려요.</p>}
       <form className="form panel" onSubmit={handleSubmit} noValidate>
         <div className="field">
-          <label htmlFor="name">이름 또는 닉네임 (선택)</label>
+          <label htmlFor="name">{nameLabel}</label>
           <input
             id="name" name="name" ref={nameRef} className="input" maxLength={20}
             value={form.name} onChange={handleChange} autoComplete="nickname" placeholder="결과 화면에 표시돼요"
@@ -133,7 +141,7 @@ function SajuInput({ form, onChange, onSubmit, loading, serverError, targetTitle
         </fieldset>
 
         {serverError && <p className="error" role="alert">{serverError}</p>}
-        <Button type="submit" block disabled={loading}>{loading ? "계산 중…" : "풀이 보기"}</Button>
+        <Button type="submit" block disabled={loading}>{loading ? "계산 중…" : submitLabel}</Button>
       </form>
     </section>
   );

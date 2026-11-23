@@ -1,12 +1,15 @@
 :root {
-  --bg: #0f1226;
-  --card: #1a1f3d;
-  --card-2: #232950;
-  --line: #313869;
-  --text: #eceefb;
-  --muted: #a3a9d1;
-  --gold: #e0b85c;
+  /* 카드 이미지(달밤의 궁궐)에서 뽑은 색: 남색 바탕 + 크림 글자 + 금빛 포인트 */
+  --bg: #12142b;
+  --card: #1c2040;
+  --card-2: #262b55;
+  --line: #343a6b;
+  --text: #f2eee6;
+  --muted: #a9a6c2;
+  --gold: #e5c995;        /* 글자·강조선: 한자의 금빛 */
+  --gold-fill: #e0b85c;   /* 채워진 버튼·선택 상태 */
   --gold-ink: #2b2200;
+  --lantern-red: #d9534f; /* 등롱 붉은색: 뱃지처럼 아주 작게만 */
   --danger: #ff8a80;
   --el-wood: #4caf7a;
   --el-fire: #ef5350;

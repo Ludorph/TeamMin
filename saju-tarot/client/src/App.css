@@ -11,7 +11,7 @@
 .btn-medium { padding: .85rem 1.2rem; font-size: 1rem; }
 .btn-small { padding: .45rem .8rem; font-size: .85rem; border-radius: .7rem; }
 .btn-block { width: 100%; }
-.btn-primary { background: var(--gold); color: var(--gold-ink); }
+.btn-primary { background: var(--gold-fill); color: var(--gold-ink); }
 .btn-ghost { background: transparent; color: var(--text); border-color: var(--line); }
 
 .hero { padding: 2.5rem 0 1.5rem; text-align: center; }
@@ -39,7 +39,7 @@
 .choice { position: relative; }
 .choice input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
 .choice span { display: inline-block; padding: .55rem .95rem; border-radius: 999px; border: 1px solid var(--line); background: var(--card-2); font-size: .92rem; }
-.choice input:checked + span { background: var(--gold); color: var(--gold-ink); border-color: var(--gold); font-weight: 700; }
+.choice input:checked + span { background: var(--gold-fill); color: var(--gold-ink); border-color: var(--gold-fill); font-weight: 700; }
 .choice input:focus-visible + span { outline: 3px solid var(--gold); outline-offset: 2px; }
 .check { display: flex; gap: .5rem; align-items: center; font-size: .92rem; }
 
@@ -72,7 +72,7 @@
 
 .tabs { display: flex; gap: .4rem; overflow-x: auto; padding-bottom: .5rem; margin-bottom: .6rem; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .tab { flex: 0 0 auto; padding: .5rem .9rem; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--muted); font-weight: 600; font-size: .9rem; cursor: pointer; white-space: nowrap; }
-.tab.active { background: var(--gold); border-color: var(--gold); color: var(--gold-ink); }
+.tab.active { background: var(--gold-fill); border-color: var(--gold); color: var(--gold-ink); }
 .tabpanel { min-width: 0; }
 .reading-text { margin: 0; font-size: 1.02rem; }
 .months { list-style: none; margin: .8rem 0 0; padding: 0; display: grid; gap: .6rem; }
@@ -81,7 +81,7 @@
 .month p { margin: .3rem 0 0; font-size: .92rem; }
 .month-head { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 .month-tag { font-size: .78rem; color: var(--muted); }
-.month-now { font-size: .72rem; background: var(--gold); color: var(--gold-ink); border-radius: 999px; padding: .05rem .5rem; font-weight: 700; }
+.month-now { font-size: .72rem; background: var(--gold-fill); color: var(--gold-ink); border-radius: 999px; padding: .05rem .5rem; font-weight: 700; }
 
 .row.two { grid-template-columns: 1.4fr 1fr; }
 .select:disabled { opacity: .5; cursor: not-allowed; }
@@ -93,7 +93,7 @@ html { scroll-behavior: smooth; }
 .panel { scroll-margin-top: 1rem; }
 .steps { list-style: none; margin: .8rem 0 0; padding: 0; display: grid; gap: .9rem; }
 .step { display: grid; grid-template-columns: 1.8rem 1fr; gap: .7rem; align-items: start; }
-.step-no { width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--gold); color: var(--gold-ink); font-weight: 800; font-size: .85rem; display: grid; place-items: center; }
+.step-no { width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--gold-fill); color: var(--gold-ink); font-weight: 800; font-size: .85rem; display: grid; place-items: center; }
 .step h3 { margin: 0 0 .15rem; font-size: .95rem; }
 .step p { margin: 0; font-size: .92rem; color: var(--text); }
 .manse-top { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
@@ -118,7 +118,7 @@ html { scroll-behavior: smooth; }
 .fcard:hover:not(.disabled) { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.4); }
 .fcard.disabled { cursor: not-allowed; filter: grayscale(.7) brightness(.7); }
 .fcard-tag { align-self: flex-start; font-size: .72rem; font-weight: 700; padding: .15rem .55rem; border-radius: 999px; background: rgba(0,0,0,.35); }
-.fcard-badge { position: absolute; top: .85rem; right: .85rem; font-size: .68rem; font-weight: 800; padding: .15rem .5rem; border-radius: .5rem; background: #fff; color: #333; }
+.fcard-badge { position: absolute; top: .85rem; right: .85rem; font-size: .68rem; font-weight: 800; padding: .15rem .5rem; border-radius: .5rem; background: var(--lantern-red); color: #fff; }
 .fcard-glyph { position: absolute; right: -.4rem; top: 18%; font-size: 6.5rem; line-height: 1; font-weight: 900; opacity: .22; pointer-events: none; font-family: "Noto Serif KR", "Batang", serif; }
 .fcard-body { position: relative; display: grid; gap: .3rem; background: linear-gradient(transparent, rgba(0,0,0,.55) 40%); margin: 0 -.85rem -.85rem; padding: 1.6rem .85rem .85rem; }
 .fcard-title { font-size: 1.25rem; line-height: 1.25; font-family: "Noto Serif KR", "Batang", serif; }
@@ -142,3 +142,31 @@ html { scroll-behavior: smooth; }
 .detail-hero h1 { position: relative; margin: 0; font-size: 1.5rem; line-height: 1.3; font-family: "Noto Serif KR", "Batang", serif; }
 .detail-hero p { position: relative; margin: 0; font-size: .9rem; opacity: .9; }
 .detail-hero .fcard-tag { justify-self: start; position: relative; }
+
+/* ---- 컨셉 일러스트가 있는 카드(총운·애정·대인관계·재물) ---- */
+.fcard.has-image, .detail-hero.has-image { background-size: cover; background-position: center 35%; background-repeat: no-repeat; }
+.fcard.has-image .fcard-glyph, .detail-hero.has-image .fcard-glyph { display: none; }
+.fcard.has-image .fcard-body { background: linear-gradient(transparent, rgba(8, 6, 20, .82) 42%); }
+.fcard.has-image .fcard-tag { background: rgba(8, 6, 20, .55); backdrop-filter: blur(2px); }
+.detail-hero.has-image { min-height: 15rem; background-position: center 30%; }
+.detail-hero.has-image::before { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 35%, rgba(8, 6, 20, .82)); }
+.detail-hero.has-image > * { position: relative; }
+.detail-hero.has-image { min-height: 19rem; background-position: center 38%; }
+
+/* 가로형 일러스트(업무·학업·건강·월간): 카드 윗부분에 그림 전체가 보이고 아래 글자 영역은 어두운 배경 */
+.fcard.art-top { background-color: #15132b; background-size: auto 72%; background-position-y: 0; }
+.detail-hero.has-image:not(.art-top) { background-position-y: 40%; }
+
+/* 준비 중(후순위) 카드는 그림은 보이되 클릭할 수 없음을 알 수 있게 살짝 어둡게 */
+.fcard.has-image.disabled { filter: grayscale(.35) brightness(.78); }
+
+/* ---- 궁합 결과 ---- */
+.match-score { text-align: center; }
+.score-num { font-size: 3.4rem; font-weight: 900; color: var(--gold); line-height: 1.1; font-family: "Noto Serif KR", "Batang", serif; }
+.score-num small { font-size: 1.1rem; color: var(--muted); font-weight: 600; margin-left: .2rem; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.pair-card { background: var(--card-2); border: 1px solid var(--line); border-radius: .8rem; padding: .8rem; display: grid; gap: .2rem; text-align: center; font-size: .85rem; }
+.pair-label { color: var(--muted); font-size: .8rem; }
+.pair-ganji { font-size: 1.7rem; letter-spacing: .1em; }
+.rating { margin: 0 0 .6rem; color: var(--gold); font-size: 1.05rem; letter-spacing: .1em; }
+.rating span { color: var(--muted); font-size: .85rem; letter-spacing: 0; margin-left: .4rem; }
