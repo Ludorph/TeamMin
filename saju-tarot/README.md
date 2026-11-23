@@ -9,7 +9,7 @@ React(Vite) + Express + SQLite. 만세력 계산은 오픈소스 `manseryeok` �
 - 오늘의 운세, 궁합(두 사람 입력)
 - 가입 없이 이용하며, 입력한 정보는 서버에 저장하지 않습니다.
 
-## 개발 환경 실행 (Node.js 22 이상)
+## 개발 환경 실행 (Node.js 22.13 이상(내장 SQLite 사용))
 ```bash
 # 서버 (http://localhost:3000)
 cd server
