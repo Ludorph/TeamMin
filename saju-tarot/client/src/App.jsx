@@ -47,6 +47,13 @@ function App() {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [step, target]);
 
+  // 모든 화면에서 같은 궁궐 배경을 유지한다. 홈이 아닌 화면은 글자가 잘 읽히도록 막을 조금 더 진하게 한다.
+  useEffect(() => {
+    document.body.classList.add("home-bg");
+    document.body.classList.toggle("inner-bg", step !== "home");
+    return () => document.body.classList.remove("home-bg", "inner-bg");
+  }, [step]);
+
   // 내 정보 제출: 궁합 카드로 들어왔다면 이어서 상대 정보를 받는다.
   async function handleSubmit() {
     setError("");
