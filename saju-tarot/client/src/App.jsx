@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getMatch, getSaju } from "./api/client";
+import { getMatch, getSaju, wakeServer } from "./api/client";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import SajuInput from "./pages/SajuInput";
@@ -41,6 +41,20 @@ function App() {
   const [error, setError] = useState("");
   const [updating, setUpdating] = useState(false);
   const [loadingText, setLoadingText] = useState("사주 팔자를 계산하고 있어요…");
+
+  // 화면을 열자마자 서버를 한 번 깨워 두고, 계산 요청이 4초 넘게 걸리면 이유를 안내한다.
+  const [slow, setSlow] = useState(false);
+  useEffect(() => {
+    wakeServer();
+  }, []);
+  useEffect(() => {
+    if (step !== "loading") {
+      setSlow(false);
+      return undefined;
+    }
+    const id = setTimeout(() => setSlow(true), 4000);
+    return () => clearTimeout(id);
+  }, [step]);
 
   // 화면(step)이나 선택한 운세가 바뀌면 맨 위에서 시작한다.
   useEffect(() => {
@@ -150,7 +164,7 @@ function App() {
           loading={false}
           serverError={error}
           heading="궁합을 볼 상대 정보를 입력하세요"
-          notice={`${form.name.trim() ? `${form.name.trim()}님` : "내 정보"}와(과) 상대의 궁합을 봅니다. 상대 정보도 서버에 저장하지 않아요.`}
+          notice="입력한 내 정보와 상대 정보로 두 사람의 궁합을 봅니다. 상대 정보도 서버에 저장하지 않아요."
           nameLabel="상대 이름 또는 닉네임 (선택)"
           submitLabel="궁합 보기"
         />
@@ -159,6 +173,11 @@ function App() {
         <div className="loading" role="status">
           <div className="spinner" />
           <p>{loadingText}</p>
+          {slow && (
+            <p className="note">
+              서버가 잠들어 있다가 깨어나는 중이에요. 처음 접속할 때는 최대 1분 정도 걸릴 수 있어요. 잠시만 기다려 주세요.
+            </p>
+          )}
         </div>
       )}
       {step === "result" && (
