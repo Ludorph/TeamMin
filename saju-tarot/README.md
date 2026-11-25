@@ -41,7 +41,3 @@ cd ../server && npm install && npm start    # 시드 후 서버 실행 (PORT 환
 
 ## 폴더
 - `client/` React 화면, `server/` Express API·SQLite·계산 로직, `docs/` 구조도·플로우차트·유스케이스 다이어그램
-
-## 남은 일
-- 사주 계산 정확도 검증(외부 만세력과 대조)
-- 해석·궁합·오늘의 운세 문구를 팀 검수 후 확정
